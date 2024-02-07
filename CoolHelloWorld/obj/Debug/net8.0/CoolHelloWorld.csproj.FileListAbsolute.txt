@@ -1,0 +1,15 @@
+/mnt/docs/code/csharp/Leraning/GitHubProject/CoolHelloWorld/bin/Debug/net8.0/CoolHelloWorld
+/mnt/docs/code/csharp/Leraning/GitHubProject/CoolHelloWorld/bin/Debug/net8.0/CoolHelloWorld.deps.json
+/mnt/docs/code/csharp/Leraning/GitHubProject/CoolHelloWorld/bin/Debug/net8.0/CoolHelloWorld.runtimeconfig.json
+/mnt/docs/code/csharp/Leraning/GitHubProject/CoolHelloWorld/bin/Debug/net8.0/CoolHelloWorld.dll
+/mnt/docs/code/csharp/Leraning/GitHubProject/CoolHelloWorld/bin/Debug/net8.0/CoolHelloWorld.pdb
+/mnt/docs/code/csharp/Leraning/GitHubProject/CoolHelloWorld/obj/Debug/net8.0/CoolHelloWorld.GeneratedMSBuildEditorConfig.editorconfig
+/mnt/docs/code/csharp/Leraning/GitHubProject/CoolHelloWorld/obj/Debug/net8.0/CoolHelloWorld.AssemblyInfoInputs.cache
+/mnt/docs/code/csharp/Leraning/GitHubProject/CoolHelloWorld/obj/Debug/net8.0/CoolHelloWorld.AssemblyInfo.cs
+/mnt/docs/code/csharp/Leraning/GitHubProject/CoolHelloWorld/obj/Debug/net8.0/CoolHelloWorld.csproj.CoreCompileInputs.cache
+/mnt/docs/code/csharp/Leraning/GitHubProject/CoolHelloWorld/obj/Debug/net8.0/CoolHelloWorld.sourcelink.json
+/mnt/docs/code/csharp/Leraning/GitHubProject/CoolHelloWorld/obj/Debug/net8.0/CoolHelloWorld.dll
+/mnt/docs/code/csharp/Leraning/GitHubProject/CoolHelloWorld/obj/Debug/net8.0/refint/CoolHelloWorld.dll
+/mnt/docs/code/csharp/Leraning/GitHubProject/CoolHelloWorld/obj/Debug/net8.0/CoolHelloWorld.pdb
+/mnt/docs/code/csharp/Leraning/GitHubProject/CoolHelloWorld/obj/Debug/net8.0/CoolHelloWorld.genruntimeconfig.cache
+/mnt/docs/code/csharp/Leraning/GitHubProject/CoolHelloWorld/obj/Debug/net8.0/ref/CoolHelloWorld.dll
