@@ -18,7 +18,7 @@ namespace CoolHelloWorld
             int p = (int)'a';
             int q = (int)'a';
             int r = (int)'a';
-            int sleep = 10;
+            int sleep = 50;
 
             while ((char)r <= helloWorld[10])
             {
