@@ -7,3 +7,5 @@ A little game.
 - string to numetical conversion with `TryParse` method. 
 - functions
 - Console color
+
+![output](../img/GuessTheNumber.jpg)
