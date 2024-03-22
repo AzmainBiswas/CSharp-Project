@@ -27,6 +27,7 @@ namespace GuessTheNumber
             int userGauss;
             int totalNumberOfGauss = 4;
             int currentNumberOfGause = 1;
+
             Random random = new Random();
             int randomNumber = random.Next(0, 11);
 

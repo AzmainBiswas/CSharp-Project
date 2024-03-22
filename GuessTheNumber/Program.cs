@@ -43,7 +43,7 @@
 
                 Console.WriteLine();
                 Console.ForegroundColor = ConsoleColor.Green;
-                Console.Write("Do you want to play more (y/n): ");
+                Console.Write("Do you want to play again? (y/n): ");
                 replayAns = Console.ReadLine()!;
                 
                 // By using the ! after Console.ReadLine()

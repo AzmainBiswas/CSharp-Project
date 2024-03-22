@@ -1,0 +1,15 @@
+/mnt/docs/code/csharp/GitHubProject/ToDoApp/bin/Debug/net8.0/ToDoApp
+/mnt/docs/code/csharp/GitHubProject/ToDoApp/bin/Debug/net8.0/ToDoApp.deps.json
+/mnt/docs/code/csharp/GitHubProject/ToDoApp/bin/Debug/net8.0/ToDoApp.runtimeconfig.json
+/mnt/docs/code/csharp/GitHubProject/ToDoApp/bin/Debug/net8.0/ToDoApp.dll
+/mnt/docs/code/csharp/GitHubProject/ToDoApp/bin/Debug/net8.0/ToDoApp.pdb
+/mnt/docs/code/csharp/GitHubProject/ToDoApp/obj/Debug/net8.0/ToDoApp.GeneratedMSBuildEditorConfig.editorconfig
+/mnt/docs/code/csharp/GitHubProject/ToDoApp/obj/Debug/net8.0/ToDoApp.AssemblyInfoInputs.cache
+/mnt/docs/code/csharp/GitHubProject/ToDoApp/obj/Debug/net8.0/ToDoApp.AssemblyInfo.cs
+/mnt/docs/code/csharp/GitHubProject/ToDoApp/obj/Debug/net8.0/ToDoApp.csproj.CoreCompileInputs.cache
+/mnt/docs/code/csharp/GitHubProject/ToDoApp/obj/Debug/net8.0/ToDoApp.sourcelink.json
+/mnt/docs/code/csharp/GitHubProject/ToDoApp/obj/Debug/net8.0/ToDoApp.dll
+/mnt/docs/code/csharp/GitHubProject/ToDoApp/obj/Debug/net8.0/refint/ToDoApp.dll
+/mnt/docs/code/csharp/GitHubProject/ToDoApp/obj/Debug/net8.0/ToDoApp.pdb
+/mnt/docs/code/csharp/GitHubProject/ToDoApp/obj/Debug/net8.0/ToDoApp.genruntimeconfig.cache
+/mnt/docs/code/csharp/GitHubProject/ToDoApp/obj/Debug/net8.0/ref/ToDoApp.dll
