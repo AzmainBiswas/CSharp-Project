@@ -8,14 +8,18 @@ class InputHandeling
 
         do
         {
+            Console.ForegroundColor = ConsoleColor.DarkMagenta;
             Console.Write("Enter corrosponding valid number to your action: ");
             userInput = Console.ReadLine();
+            Console.ForegroundColor = ConsoleColor.White;
 
             conversionCheck = int.TryParse(userInput, out menuSelection);
             if (!conversionCheck || menuSelection < lowerBound || menuSelection > upperBound)
             {
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine(userInput + " is not valid.");
                 conversionCheck = false;
+                Console.ForegroundColor = ConsoleColor.White;
             }
         } while (!conversionCheck);
 

@@ -56,20 +56,17 @@ class Action
         string addedTodoJsonString = JsonSerializer.Serialize(todoListJsonData);
         File.WriteAllText(jsonFilePath, addedTodoJsonString);
 
+        Console.ForegroundColor = ConsoleColor.Green;
         Console.WriteLine("");
         Console.WriteLine("-----------------------------------------------------------");
         Console.WriteLine("Your task " + newToDo.Name + " Added.");
         Console.WriteLine("Added time: " + newToDo.CreationTime.ToString());
         Console.WriteLine("-----------------------------------------------------------");
+        Console.ForegroundColor = ConsoleColor.White;
 
-        // free memory.
-        todoJsonString = null;
-        todoListJsonData = null;
-        GC.Collect();
     }
 
     // viewing toDo list..
-
     public static void ViewAllToDo()
     {
         // read from json data
@@ -79,10 +76,12 @@ class Action
 
         if (toDoJsons == null || toDoJsons.Count == 0)
         {
+            Console.ForegroundColor = ConsoleColor.DarkRed;
             Console.WriteLine("");
             Console.WriteLine("Your List is empty...");
             Console.WriteLine("Please add ToDo first.");
             Console.WriteLine("");
+            Console.ForegroundColor = ConsoleColor.White;
             return;
         }
 
@@ -96,15 +95,15 @@ class Action
 
             if (toDo.Pending) Console.WriteLine("Pending!!!");
             else Console.WriteLine("Completed ");
-            Console.WriteLine("");
-
             Console.WriteLine("-----------------------------------------------------------");
         }
 
-        //free memory
-        todoJsonString = null;
-        toDoJsons = null;
-        GC.Collect();
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine("");
+        Console.WriteLine("-----------------------------------------------------------");
+        Console.WriteLine("You have total " + toDoJsons.Count + " ToDos and " + toDoJsons.Count(x => x.Pending == false) + " completed ToDos.");
+        Console.WriteLine("-----------------------------------------------------------");
+        Console.ForegroundColor = ConsoleColor.White;
     }
 
     // view all pending todo .. 
@@ -119,10 +118,12 @@ class Action
 
         if (toDoJsons == null || toDoJsons.Count == 0)
         {
+            Console.ForegroundColor = ConsoleColor.DarkRed;
             Console.WriteLine("");
             Console.WriteLine("Your List is empty...");
             Console.WriteLine("Please add ToDo first.");
             Console.WriteLine("");
+            Console.ForegroundColor = ConsoleColor.White;
             return;
         }
 
@@ -147,17 +148,15 @@ class Action
             }
         }
 
+        Console.ForegroundColor = ConsoleColor.Green;
         Console.WriteLine("");
         Console.WriteLine("-----------------------------------------------------------");
         if (countPending == 0) Console.WriteLine("You have no pending work todo.");
         else if (countPending == 1) Console.WriteLine($"You have total {countPending} work pending and {countUrgent} urgent.");
         else Console.WriteLine($"You have total {countPending} works pending and out of them {countUrgent} are urgent.");
         Console.WriteLine("-----------------------------------------------------------");
+        Console.ForegroundColor = ConsoleColor.White;
 
-        //free memory
-        todoJsonString = null;
-        toDoJsons = null;
-        GC.Collect();
     }
 
     // mark as complete
@@ -173,10 +172,12 @@ class Action
 
         if (toDoJsons == null || toDoJsons.Count == 0)
         {
+            Console.ForegroundColor = ConsoleColor.DarkRed;
             Console.WriteLine("");
             Console.WriteLine("Your List is empty...");
             Console.WriteLine("Please add ToDo first.");
             Console.WriteLine("");
+            Console.ForegroundColor = ConsoleColor.White;
             return;
         }
 
@@ -207,14 +208,104 @@ class Action
         string? addedTodoJsonString = JsonSerializer.Serialize(toDoJsons);
         File.WriteAllText(jsonFilePath, addedTodoJsonString);
 
+        Console.ForegroundColor = ConsoleColor.Green;
         Console.WriteLine("-----------------------------------------------------------");
         Console.WriteLine($"{toDoJsons[menuSelection].Name} merked as complete.");
         Console.WriteLine("-----------------------------------------------------------");
+        Console.ForegroundColor = ConsoleColor.White;
+    }
 
-        //free memory
-        todoJsonString = null;
-        toDoJsons = null;
-        addedTodoJsonString = null;
-        GC.Collect();
+    // Remove all completed ToDos
+    public static void RemoveCompleted()
+    {
+        // read from json file
+        string? todoJsonString = File.ReadAllText(jsonFilePath);
+        List<ToDoJson>? toDoJsons = JsonSerializer.Deserialize<List<ToDoJson>>(todoJsonString);
+
+        if (toDoJsons == null || toDoJsons.Count == 0)
+        {
+            Console.ForegroundColor = ConsoleColor.DarkRed;
+            Console.WriteLine("");
+            Console.WriteLine("Your List is empty...");
+            Console.WriteLine("Please add ToDo first.");
+            Console.WriteLine("");
+            Console.ForegroundColor = ConsoleColor.White;
+            return;
+        }
+
+        Console.Write("Are you sure? (y/n) ");
+        string? conformation = Console.ReadLine();
+
+        if (conformation == null)
+        {
+            Console.WriteLine("Action is canceled");
+            return;
+        }
+
+        if (conformation.Trim().ToLower() != "y")
+        {
+            Console.WriteLine("Action is canceled");
+            return;
+        }
+
+        // remove all completed task
+        toDoJsons.RemoveAll(x => x.Pending == false);
+
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine("-----------------------------------------------------------");
+        Console.WriteLine("All to completed ToDos has been removed.");
+        Console.WriteLine("-----------------------------------------------------------");
+        Console.ForegroundColor = ConsoleColor.White;
+        // write to jason
+        string? addedTodoJsonString = JsonSerializer.Serialize(toDoJsons);
+        File.WriteAllText(jsonFilePath, addedTodoJsonString);
+    }
+
+    // remove all
+    public static void RemoveAll()
+    {
+        // read from json file
+        string? todoJsonString = File.ReadAllText(jsonFilePath);
+        List<ToDoJson>? toDoJsons = JsonSerializer.Deserialize<List<ToDoJson>>(todoJsonString);
+
+        if (toDoJsons == null || toDoJsons.Count == 0)
+        {
+            Console.ForegroundColor = ConsoleColor.DarkRed;
+            Console.WriteLine("");
+            Console.WriteLine("Your List is empty...");
+            Console.WriteLine("Please add ToDo first.");
+            Console.WriteLine("");
+            Console.ForegroundColor = ConsoleColor.White;
+            return;
+        }
+
+        Console.Write("Are you sure? (y/n) ");
+        string? conformation = Console.ReadLine();
+
+        if (conformation == null)
+        {
+            Console.WriteLine("Action is canceled");
+            return;
+        }
+
+        if (conformation.Trim().ToLower() != "y")
+        {
+            Console.WriteLine("Action is canceled");
+            return;
+        }
+
+        // remove all task
+        toDoJsons.Clear();
+
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine("-----------------------------------------------------------");
+        Console.WriteLine("All items are removed...");
+        Console.WriteLine("-----------------------------------------------------------");
+        Console.ForegroundColor = ConsoleColor.White;
+
+        // write to jason
+        string? addedTodoJsonString = JsonSerializer.Serialize(toDoJsons);
+        File.WriteAllText(jsonFilePath, addedTodoJsonString);
+
     }
 }
