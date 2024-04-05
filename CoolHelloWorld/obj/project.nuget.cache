@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KxF7ZAZuZ14RhySvBUl2v5ooFxuVtM22ZSVqFqcwTTUdanRMmj9ixHNxeMdySrQMltQuSiaT62EDQNMs+F9PgQ==",
+  "dgSpecHash": "b2YVxxEx77qZHmWDFfTrnRmpaR0atxJljw2GE1SWRDVnqhSQDXqIwEWSp1lp6SiiBayhCI6jydZF+DB3ENpTVQ==",
   "success": true,
-  "projectFilePath": "/mnt/docs/code/csharp/GitHubProject/CoolHelloWorld/CoolHelloWorld.csproj",
+  "projectFilePath": "D:\\code\\csharp\\GitHubProject\\CoolHelloWorld\\CoolHelloWorld.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

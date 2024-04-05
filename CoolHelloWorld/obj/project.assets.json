@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "/home/azmain/.nuget/packages/": {}
+    "C:\\Users\\azmai\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/mnt/docs/code/csharp/GitHubProject/CoolHelloWorld/CoolHelloWorld.csproj",
+      "projectUniqueName": "D:\\code\\csharp\\GitHubProject\\CoolHelloWorld\\CoolHelloWorld.csproj",
       "projectName": "CoolHelloWorld",
-      "projectPath": "/mnt/docs/code/csharp/GitHubProject/CoolHelloWorld/CoolHelloWorld.csproj",
-      "packagesPath": "/home/azmain/.nuget/packages/",
-      "outputPath": "/mnt/docs/code/csharp/GitHubProject/CoolHelloWorld/obj/",
+      "projectPath": "D:\\code\\csharp\\GitHubProject\\CoolHelloWorld\\CoolHelloWorld.csproj",
+      "packagesPath": "C:\\Users\\azmai\\.nuget\\packages\\",
+      "outputPath": "D:\\code\\csharp\\GitHubProject\\CoolHelloWorld\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/azmain/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\azmai\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -64,7 +64,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.200/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
